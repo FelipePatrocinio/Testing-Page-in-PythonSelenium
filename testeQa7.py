@@ -14,6 +14,9 @@ from selenium.webdriver.support.ui import Select
 import time
 
 driver = webdriver.Chrome(executable_path=r'./chromedriver.exe')
+
+### Test case #001 - Validando página redirecionada e botão "Iniciar" ###
+
 driver.get('https://www.selenium.dev/')
 driver.maximize_window()
 sleep(2)
@@ -29,8 +32,7 @@ driver.current_url
 title = driver.title
 url = driver.current_url
 
-print(url,"\n", title,"\n", validandobtn)
-driver.get(url) 
+print(url,"\n", title,"\n", validandobtn) 
 driver.save_screenshot("image.png") 
 image = Image.open("image.png") 
 image.show() 
